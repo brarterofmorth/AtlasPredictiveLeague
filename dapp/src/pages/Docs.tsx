@@ -26,15 +26,19 @@ const Docs = () => {
               <h2 className="text-3xl font-bold text-foreground">Demo Video</h2>
             </div>
             <Card className="bg-card/60 backdrop-blur-sm border-border p-8">
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <Play className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                  <p className="text-muted-foreground">Demo video coming soon</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Watch a walkthrough of creating markets, making predictions, and claiming rewards
-                  </p>
-                </div>
+              <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                <video
+                  controls
+                  className="w-full h-full"
+                  poster="/placeholder.svg"
+                >
+                  <source src="/demo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
+              <p className="text-sm text-muted-foreground mt-4 text-center">
+                Watch a walkthrough of creating markets, making predictions with encrypted weights, and claiming rewards
+              </p>
             </Card>
           </section>
 
